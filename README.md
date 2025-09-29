@@ -23,8 +23,8 @@ This application allows users to create a hierarchical structure of inputs, with
 
 ### Clone the Repository
 ```bash
-git clone <https://github.com/KushanMahasen/porttemplate-demo.git>
-cd <porttemplate-demo>
+git clone https://github.com/KushanMahasen/porttemplate-demo.git
+cd porttemplate-demo
 ```
 
 ### Install Dependencies
