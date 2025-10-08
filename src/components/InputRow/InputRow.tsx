@@ -26,10 +26,17 @@ const InputRow: React.FC<InputRowProps> = ({ node, updateNode, deleteNode, addCh
                     readOnly={node.readOnly}
                     className={node.readOnly ? styles.readOnlyInput : ""}
                 />
+
                 {hovered && (
                     <div className={styles.options}>
                         <div className={styles.optionGroup}>
-                            <label style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                            <label
+                                style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    gap: "6px",
+                                }}
+                            >
                                 <div className={styles.toggleSwitch}>
                                     <input
                                         type="checkbox"
@@ -43,10 +50,14 @@ const InputRow: React.FC<InputRowProps> = ({ node, updateNode, deleteNode, addCh
                             <button onClick={() => deleteNode(node.id)}>🗑</button>
                         </div>
 
-                        <button className={styles.addChild} onClick={() => addChildNode(node.id)}>+</button>
+                        <button
+                            className={styles.addChild}
+                            onClick={() => addChildNode(node.id)}
+                        >
+                            +
+                        </button>
                     </div>
                 )}
-
             </div>
 
             {node.children.length > 0 && (

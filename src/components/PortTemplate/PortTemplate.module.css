@@ -3,6 +3,7 @@
    ============================== */
 .container {
     padding: 16px;
+    font-family: sans-serif;
 }
 
 /* ==============================
@@ -11,39 +12,54 @@
 .header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 16px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.addButton {
+    background: transparent;
+    color: #007bff;
+    border: 1px dotted #007bff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .headerButtons {
     display: flex;
-    align-items: center;
+    gap: 8px;
 }
 
-.headerButtons button {
-    margin-left: 8px;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.headerButtons button:first-child {
+.backButton {
     background: transparent;
     color: #007bff;
     border: 1px solid #007bff;
-}
-
-.headerButtons button:last-child {
-    background: #007bff;
-    color: white;
-    border: none;
-}
-
-.container > .header > button {
-    background: transparent;
-    color: #007bff;
-    border: 1px dotted #007bff;
-    padding: 4px 8px;
+    padding: 6px 12px;
     border-radius: 4px;
-    font-weight: bold;
+    cursor: pointer;
+}
+
+.saveButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.rootLevel {
+    position: relative;
+    margin-left: 20px;
+}
+
+.rootLevel::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    bottom: 17px;
+    left: 10px;
+    border-left: 1px dotted #aaa;
 }

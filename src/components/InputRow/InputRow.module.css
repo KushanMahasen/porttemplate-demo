@@ -1,9 +1,20 @@
 /* ==============================
    Layout Containers
    ============================== */
+
 .rowContainer {
     position: relative;
     margin-bottom: 8px;
+}
+
+.childrenContainer > .rowContainer::before,
+.rootLevel::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    border-left: 1px dotted #aaa;
 }
 
 .row {
@@ -11,7 +22,7 @@
     align-items: center;
     gap: 8px;
     position: relative;
-    padding-left: 20px;
+    padding-left: 30px;
     margin: 10px 0;
 }
 
@@ -19,24 +30,33 @@
     content: "";
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 10px;
     width: 20px;
     border-top: 1px dotted #888;
+    transform: translateY(-50%);
 }
 
 .children {
     position: relative;
     margin-left: 20px;
-    padding-left: 10px;
 }
 
 .children::before {
     content: "";
     position: absolute;
-    top: 0;
     left: 10px;
-    bottom: 0;
+    top: -10px;
+    bottom: 18px;
     border-left: 1px dotted #aaa;
+}
+
+.children > .rowContainer:last-child::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    height: 10px;
+    border-left: 1px dotted transparent;
 }
 
 /* ==============================
